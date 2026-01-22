@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Dashboard - Orderly</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="main-header">
+    <h1>Canteen Staff Dashboard </h1>
+</header>
+
+<nav class="navbar">
+    <a href="#" id="orders-nav-link" class="nav-link active">Orders</a>
+    <a href="#" id="manage-menu-nav-link" class="nav-link">Manage Menu</a>
+    <a href="#" id="logout-btn" class="nav-link">Logout</a>
+</nav>
+
+<main class="container">
+    <div id="orders-view" class="content-wrapper card">
+        <h2>Customer Orders</h2>
+        <div id="active-orders-container">
+            <h3>Active Orders (Oldest First)</h3>
+            <div id="active-orders-list">
+                <p>Loading active orders...</p>
+            </div>
+        </div>
+        <hr class="section-divider">
+        <div id="completed-orders-container">
+            <h3>Recent Completed Orders</h3>
+            <div id="completed-orders-list">
+                <p>No completed orders yet.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="manage-menu-view" class="content-wrapper card" style="display: none;">
+        <h2>Manage Menu Items</h2>
+        <form id="menu-item-form" class="menu-form card">
+            <h3 id="form-title">Add Item</h3>
+            <input type="hidden" id="item-id">
+            <div class="form-grid">
+                <div class="form-group">
+                    <label for="item-name">Name:</label>
+                    <input type="text" id="item-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="item-price">Price (₹):</label>
+                    <input type="number" id="item-price" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="item-prep-time">Prep Time (mins):</label>
+                    <input type="number" id="item-prep-time" required>
+                </div>
+                <div class="form-group">
+                    <label for="item-image-url">Image URL:</label>
+                    <input type="text" id="item-image-url">
+                </div>
+                <div class="form-group">
+                    <label for="item-category">Category:</label>
+                    <input type="text" id="item-category" required>
+                </div>
+                <div class="form-group">
+                    <label for="item-available">Available:</label>
+                    <select id="item-available">
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn" id="save-item-btn">Add Item</button>
+                <button type="button" class="btn-secondary" id="cancel-edit-btn" style="display: none;">Cancel Edit</button>
+            </div>
+        </form>
+
+        <hr class="section-divider">
+
+        <h3>Current Menu</h3>
+        <div id="current-menu-list">
+            <p>Loading menu...</p>
+        </div>
+    </div>
+</main>
+
+<script src="js/staff.js"></script>
+</body>
+</html>

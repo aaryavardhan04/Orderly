@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canteen Menu - Orderly</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="main-header">
+    <h1>Canteen Menu </h1>
+</header>
+
+<nav class="navbar">
+    <a href="/customer-dashboard.html" class="nav-link active">Home</a>
+    <a href="/cart.html" id="cart-link" class="nav-link">Cart (0)</a>
+    <a href="/history.html" class="nav-link">History</a>
+    <a href="#" id="logout-btn" class="nav-link">Logout</a>
+</nav>
+
+<main class="container">
+    <div class="content-wrapper card">
+        <h2>Food & Beverages</h2>
+        <div class="filter-container">
+            <label for="category-filter">Filter by Category:</label>
+            <select id="category-filter">
+                <option value="All">All Categories</option>
+                <!-- Categories will be populated by JavaScript -->
+            </select>
+        </div>
+        <div id="menu-items-container" class="menu-grid">
+            <!-- Menu items will be loaded here by JavaScript -->
+            <p>Loading menu...</p>
+        </div>
+    </div>
+</main>
+
+<script src="js/customer.js"></script>
+</body>
+</html>

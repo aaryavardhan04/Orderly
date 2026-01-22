@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - Orderly</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="main-header">
+    <h1>Your Cart </h1>
+</header>
+
+<nav class="navbar">
+    <a href="/customer-dashboard.html" class="nav-link">Home</a>
+    <a href="/cart.html" id="cart-link" class="nav-link active">Cart</a>
+    <a href="/history.html" class="nav-link">History</a>
+    <a href="#" id="logout-btn" class="nav-link">Logout</a>
+</nav>
+
+<main class="container">
+    <div class="content-wrapper card">
+        <div id="cart-container">
+            <p>Loading your cart...</p>
+        </div>
+
+        <div id="cart-summary" class="cart-summary">
+        </div>
+    </div>
+</main>
+
+<script src="js/cart.js"></script>
+</body>
+</html>

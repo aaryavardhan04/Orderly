@@ -1,0 +1,391 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0%;
+    margin-bottom: 5rem;
+    background: linear-gradient(to bottom, #4338ca, white);
+    color: #333;
+}
+
+/* body:hover { background: linear-gradient(to bottom, #4338ca, black);} */
+
+/* Header Styles */
+.main-header {
+    background-color:white; 
+    color: #4338ca;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-size: large;
+    box-shadow: 0 2px 7px rgba(0,0,0,0.8);
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #333;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.nav-link {
+    color: white;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #555;
+}
+
+.nav-link.active {
+    background-color: #4338ca;
+}
+
+/* Main Container */
+.container {
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    margin-bottom: 5rem;
+    border-color: 2px solid #000;
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Card Styles for Forms & Content */
+.card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card h2, .card h3 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: #111;
+}
+
+/* --- Staff Page Specific Styles --- */
+.menu-form {
+    padding: 1rem;
+    border: 2px solid #000;
+    margin-bottom: 2rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem;
+    border-bottom: 1px solid #eee;
+}
+
+.list-item:last-child {
+    border-bottom: none;
+}
+
+.list-item div {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btn-secondary {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #eee;
+    border: 1px solid #ccc;
+}
+
+.btn-secondary:hover {
+    background-color: #ddd;
+}
+
+
+/* Order History Styles */
+.order-card {
+    border: 2px solid #000;;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #a9a9a9;
+}
+
+.order-card-header {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-status {
+    padding: 0.2rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+.status-pending { background-color: #f0ad4e; }
+.status-ready { background-color: #5cb85c; }
+.status-completed { background-color: green; }
+
+.order-card-body {
+    font-size: 0.9rem;
+    color: #444;
+}
+.order-card-body p { margin: 0.25rem 0; }
+
+.section-divider {
+    border: 0;
+    border-top: 1px solid #333;
+    margin: 2rem 0;
+}
+
+/* Cart Table Styles */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 5rem;
+}
+.cart-table th, .cart-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #555;
+}
+.cart-table th { background-color: #f9f9f9; }
+
+.quantity-controls { display: flex; align-items: center; }
+.quantity-controls button {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+}
+.quantity-controls input {
+    width: 40px;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin: 0 0.5rem;
+}
+
+.remove-btn {
+    background-color: rgba(243, 46, 46, 0.9);
+    border: 1px solid lightcoral;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.remove-btn:hover { background-color: #5147c4; }
+
+.cart-summary { text-align: right; }
+.cart-summary h3 { margin: 0 0 1rem; }
+
+.place-order-btn {
+    background-color: #4338ca;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.place-order-btn:hover { background-color: #4338ca; }
+
+.cart-empty-msg {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #888;
+}
+
+/* Filter container */
+.filter-container {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+.filter-container label {
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+.filter-container select {
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+
+/* Menu Grid Styles */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.menu-card {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-card .img-placeholder {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-style: italic;
+}
+
+.menu-card-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.menu-card-content {
+    padding: 1rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-card-content h3 {
+    margin: 0 0 0.5rem;
+}
+
+.menu-card-content .price {
+    color: #E53935; /* Red */
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.menu-card-content .info {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+}
+
+/* Form Group Styles */
+.form-group {
+    color: #4338ca;
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    color: black;
+    width: 100%;
+    padding: 0.75rem;
+    border: 2px solid #000;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #4338ca;
+    background-color: #fff;
+}
+
+/* Button Styles */
+.btn {
+    color: white;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #4338ca; /* Yellow */
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Pushes button to the bottom */
+}
+.btn:hover { background-color: black; }
+
+/* Form Switch Link */
+.form-switch {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.form-switch a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.form-switch a:hover {
+    text-decoration: underline;
+}
+
+
+/* Error Message Styles */
+.error-message {
+    color: #D8000C; /* Red */
+    background-color: #FFD2D2;
+    border: 1px solid #D8000C;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    border-radius: 4px;
+    text-align: center;
+    display: none; /* Hidden by default */
+}
+
+.menu-item-image {
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    margin-right: 15px;
+    border-radius: 5px;
+    flex-shrink: 0;
+  }
